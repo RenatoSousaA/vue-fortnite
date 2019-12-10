@@ -1,5 +1,7 @@
 <template>
   <div class="container py-2 mt-4 mb-4">
+    <h1>Timeline</h1>
+    <hr />
     <div class="row no-gutters" v-for="timeLine in dadosTimeLine[0].chapters" :key="timeLine.id">
       <div class="col-sm" v-if="timeLine.id % 2 == 0"></div>
       <div class="col-sm-1 text-center flex-column d-none d-sm-flex" v-if="timeLine.id % 2 == 0">
@@ -28,6 +30,12 @@
               Duração:
               {{timeLine.start | formatDate}} - {{timeLine.end | formatDate}}
             </h4>
+            <img
+              class="img-card"
+              :src="timeLine.imageUrl"
+              :alt="'Season ' + timeLine.season"
+              :title="'Season ' + timeLine.season"
+            />
           </div>
         </div>
       </div>
@@ -42,6 +50,12 @@
               Duração:
               {{timeLine.start | formatDate}} - {{timeLine.end | formatDate}}
             </h4>
+            <img
+              class="img-card"
+              :src="timeLine.imageUrl"
+              :alt="'Season ' + timeLine.season"
+              :title="'Season ' + timeLine.season"
+            />
           </div>
         </div>
       </div>
@@ -64,25 +78,6 @@
       <div class="col-sm" v-if="timeLine.id % 2 != 0"></div>
     </div>
   </div>
-  <!-- <div class="row justify-content-center">
-    <div class="col-md-6">
-      <ul class="timeline">
-        <li
-          class="timeline-item bg-white rounded ml-3 p-4 shadow"
-          v-for="timeLine in dadosTimeLine[0].chapters"
-          :key="timeLine.id"
-        >
-          <div class="timeline-arrow"></div>
-          <h2 class="h5 mb-0 text-gray">Chapter {{timeLine.chapter}} | Season {{timeLine.season}}</h2>
-          <span class="small text-gray">
-            <i class="fa fa-clock-o mr-1"></i>
-            Duração:
-            {{timeLine.start | formatDate}} - {{timeLine.end | formatDate}}
-          </span>
-        </li>
-      </ul>
-    </div>
-  </div>-->
 </template>
 
 <script>
@@ -102,4 +97,22 @@ export default {
 </script>
 
 <style scoped>
+.img-card {
+  width: 400px;
+  height: 200px;
+  box-shadow: 0px 0px 5px 3px #828282;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-variant: all-small-caps;
+  margin: 20px 0;
+}
+
+hr {
+  border-color: aliceblue;
+  margin: 20px 0;
+}
 </style>

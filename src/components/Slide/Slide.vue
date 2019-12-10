@@ -9,7 +9,7 @@
       <div class="carousel-inner">
         <div
           class="carousel-item"
-          v-for="slide in dados.slide"
+          v-for="slide in dadosSlide[0].slide"
           :key="slide.id"
           v-bind:class="[slide.id == 0 ? 'active' : '']"
         >
@@ -29,24 +29,9 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
-  created() {
-    axios
-      .get("http://5dee5773b3d17b00146a273c.mockapi.io/fortnite/infos")
-      .then(res => {
-        this.dados = res.data[0];
-      })
-      .catch(err => {
-        this.erros.push(err);
-      });
-  },
-  data() {
-    return {
-      erros: [],
-      dados: []
-    };
+  props: {
+    dadosSlide: Array
   }
 };
 </script>
@@ -54,5 +39,9 @@ export default {
 <style scoped>
 #carouselPrincipal {
   margin: 20px;
+}
+
+.carousel-inner {
+  box-shadow: 0px 0px 5px 1px #9a9a9ac9;
 }
 </style>

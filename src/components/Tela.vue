@@ -1,16 +1,35 @@
 <template>
   <div>
-    <slide></slide>
+    <slide :dadosSlide="[dados]"></slide>
+    <timeLine :dadosTimeLine="[dados]"></timeLine>
   </div>
 </template>
 
 <script>
-// import axios from "axios";
 import Slide from "./Slide/Slide";
+import TimeLine from "./TimeLine/TimeLine";
+import axios from "axios";
 
 export default {
+  created() {
+    axios
+      .get("http://5dee5773b3d17b00146a273c.mockapi.io/fortnite/infos")
+      .then(res => {
+        this.dados = res.data[0];
+      })
+      .catch(err => {
+        this.erros.push(err);
+      });
+  },
   components: {
-    "slide": Slide
+    slide: Slide,
+    timeLine: TimeLine
+  },
+  data() {
+    return {
+      erros: [],
+      dados: []
+    };
   }
 };
 </script>

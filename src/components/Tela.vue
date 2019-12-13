@@ -1,13 +1,15 @@
 <template>
   <div>
-    <slide :dadosSlide="[dados]"></slide>
-    <timeLine :dadosTimeLine="[dados]"></timeLine>
+    <slide :dadosSlide="[dados]" />
+    <timeLine :dadosTimeLine="[dados]" />
+    <news />
   </div>
 </template>
 
 <script>
 import Slide from "./Slide/Slide";
 import TimeLine from "./TimeLine/TimeLine";
+import News from "./News/News"
 import axios from "axios";
 
 export default {
@@ -23,7 +25,8 @@ export default {
   },
   components: {
     slide: Slide,
-    timeLine: TimeLine
+    timeLine: TimeLine,
+    news: News
   },
   data() {
     return {

@@ -77,6 +77,7 @@
       </div>
       <div class="col-sm" v-if="timeLine.id % 2 != 0"></div>
     </div>
+    <hr/>
   </div>
 </template>
 
@@ -113,6 +114,6 @@ h1 {
 
 hr {
   border-color: aliceblue;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 </style>

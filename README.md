@@ -1,24 +1,16 @@
-# vue-pics
+# Vue Fortnite
 
-## Project setup
+## Antes de iniciar o projeto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Para executar o projeto
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Para gerar um pacote de produção
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

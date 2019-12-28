@@ -9,7 +9,7 @@
               <label for="nomeJogo">Nick do Jogo</label>
               <input type="text" class="form-control" placeholder="Digite seu nome dentro do jogo" />
             </div>
-            <button type="submit" class="btn btn-primary" @click="addRow">Adicionar amigo</button>
+            <a href="javascript:;" class="btn btn-primary" @click="addRow">Adicionar amigo</a>
           </form>
 
           <table class="table table-striped table-dark mt-4">

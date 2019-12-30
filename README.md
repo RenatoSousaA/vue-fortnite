@@ -14,3 +14,8 @@ npm run serve
 ```
 npm run build
 ```
+
+### O que é - Vue Fortnite?
+```
+Fortnite com certeza é um dos jogos com mais players da atualidade e com nosso site, você começa a conhecer um pouco mais dessa história além de poder adicionar seus amigos.
+```

@@ -30,12 +30,14 @@
               Duração:
               {{timeLine.start | formatDate}} - {{timeLine.end | formatDate}}
             </h4>
-            <img
-              class="img-card"
-              :src="timeLine.imageUrl"
-              :alt="'Season ' + timeLine.season"
-              :title="'Season ' + timeLine.season"
-            />
+            <a v-bind:href="timeLine.site" target="_blank">
+              <img
+                class="img-card"
+                :src="timeLine.imageUrl"
+                :alt="'Season ' + timeLine.season"
+                :title="'Season ' + timeLine.season"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -50,12 +52,14 @@
               Duração:
               {{timeLine.start | formatDate}} - {{timeLine.end | formatDate}}
             </h4>
-            <img
-              class="img-card"
-              :src="timeLine.imageUrl"
-              :alt="'Season ' + timeLine.season"
-              :title="'Season ' + timeLine.season"
-            />
+            <a v-bind:href="timeLine.site" target="_blank">
+              <img
+                class="img-card"
+                :src="timeLine.imageUrl"
+                :alt="'Season ' + timeLine.season"
+                :title="'Season ' + timeLine.season"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -77,7 +81,7 @@
       </div>
       <div class="col-sm" v-if="timeLine.id % 2 != 0"></div>
     </div>
-    <hr/>
+    <hr />
   </div>
 </template>
 
